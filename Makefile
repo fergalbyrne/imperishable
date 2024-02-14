@@ -24,7 +24,7 @@ all: build
 
 build:
 	mdbook build
-	mv docs/pdf/output.pdf docs/imperishable.pdf
+	mv docs/pdf/output.pdf docs/html/imperishable.pdf
 	if [ -f .git2rss -a -x git2rss ] ; then ./git2rss > book/commits.xml ; fi
 
 serve:
@@ -69,7 +69,7 @@ gh-pages: build
 	VER="$$( git describe --always --tags --dirty )" ; \
 	git worktree add --force "$$WORK" gh-pages ; \
 	rm -rf "$$WORK"/* ; \
-	rsync -av docs/ "$$WORK"/ ; \
+	rsync -av docs/html/ "$$WORK"/ ; \
 	if [ -f CNAME ] ; then cp CNAME "$$WORK"/ ; fi ; \
 	pushd "$$WORK" ; \
 	git add -A ; \
