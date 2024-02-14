@@ -2,8 +2,10 @@
 
 deploy: docs
 	@echo "=====> deploying to Github"
-	git worktree add --force /tmp/book gh-pages
+	mkdir -p /tmp/book
+	git worktree add /tmp/book gh-pages
 	mdbook build
+	mv docs/pdf/output.pdf docs/imperishable.pdf
 	cp -rp docs/* /tmp/book/
 	cd /tmp/book && \
 		git update-ref -d refs/heads/gh-pages && \
