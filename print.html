@@ -41,6 +41,32 @@
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
+        <!-- Custom JS scripts for mdbook-pdf PDF generation -->
+        <script type='text/javascript'>
+            let markAllContentHasLoadedForPrinting = () =>
+                window.setTimeout(
+                    () => {
+                        let p = document.createElement('div');
+                        p.setAttribute('id', 'content-has-all-loaded-for-mdbook-pdf-generation');
+                        document.body.appendChild(p);
+                    }, 100
+                );
+
+            window.addEventListener('load', () => {
+                // Expand all the <details> elements for printing.
+                r = document.getElementsByTagName('details');
+                for (let i of r)
+                    i.open = true;
+
+                try {
+                    MathJax.Hub.Register.StartupHook('End', markAllContentHasLoadedForPrinting);
+                } catch (e) {
+                    markAllContentHasLoadedForPrinting();
+                }
+            });
+        </script>
+    <div style="display: none"><a href="#foreword">foreword</a><a href="#shownotes">shownotes</a><a href="#20240126">20240126</a><a href="#devnotes">devnotes</a></div>
+
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script type="text/javascript">
             try {
@@ -83,7 +109,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="foreword.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="20240126.html"><strong aria-hidden="true">2.</strong> January 26th: Scheme Learning Resources</a></li><li class="chapter-item expanded "><a href="devnotes.html"><strong aria-hidden="true">3.</strong> Appendix A - Dev Notes</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="foreword.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="shownotes.html"><strong aria-hidden="true">2.</strong> Shownotes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="20240126.html"><strong aria-hidden="true">2.1.</strong> January 26th: Scheme Learning Resources</a></li></ol></li><li class="chapter-item expanded "><a href="devnotes.html"><strong aria-hidden="true">3.</strong> Appendix A - Dev Notes</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -186,8 +212,12 @@ is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=choos
   [Tips](./chapter_25.md), [Outputs](./chapter_26.md), [Benefits](./chapter_27.md)
 - **Technique**: [<span style="font-weight: 300">Diagrams</span>](./chapter_29.md)
 -->
+<div style="break-before: page; page-break-before: always;"></div><h1 id="shownotes"><a class="header" href="#shownotes">Shownotes</a></h1>
+<h2 id="january-2024"><a class="header" href="#january-2024">January 2024</a></h2>
+<h3 id="january-26th---scheme-learning-resources"><a class="header" href="#january-26th---scheme-learning-resources">January 26th - <a href="./20240126.html">Scheme Learning Resources</a></a></h3>
+<p>In which Will Byrd shows us some starting points for diving into his favourite programming language</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="january-26th-2024-scheme-learning-resources"><a class="header" href="#january-26th-2024-scheme-learning-resources">January 26th 2024: Scheme Learning Resources</a></h1>
-<iframe width="800" height="450" src="https://www.youtube.com/embed/iC8eSdoyu9A?si=0svNRBLRmDH8LplB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><a href="https://www.youtube.com/watch?v=iC8eSdoyu9A"><img src="https://img.youtube.com/vi/iC8eSdoyu9A/0.jpg" width="100%"/></a></p>
 <h2 id="the-little-schemer-by-dan-friedman-and-matthias-felleisen"><a class="header" href="#the-little-schemer-by-dan-friedman-and-matthias-felleisen">The Little Schemer by Dan Friedman and Matthias Felleisen</a></h2>
 <ul>
 <li><a href="https://mitpress.mit.edu/9780262560993/the-little-schemer/">The Little Schemer (MIT Press)</a></li>
@@ -197,7 +227,7 @@ is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=choos
 <li><a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">The Structure and Interpretation of Computer Programs</a></li>
 </ul>
 <h2 id="mit-6001-1986-lecture-series"><a class="header" href="#mit-6001-1986-lecture-series">MIT 6.001 1986 Lecture Series</a></h2>
-<iframe width="800" height="450" src="https://www.youtube.com/embed/videoseries?si=QTCjrbRVLwYF_xsx&amp;list=PLE18841CABEA24090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p><a href="https://www.youtube.com/embed/videoseries?si=QTCjrbRVLwYF_xsx&amp;list=PLE18841CABEA24090"><img src="https://img.youtube.com/vi/-J_xL4IGhJA/0.jpg" width="100%"/></a></p>
 <ul>
 <li><a href="https://www.youtube.com/playlist?list=PLE18841CABEA24090">MIT 6.001 1986 Lectures on YouTube</a></li>
 </ul>
