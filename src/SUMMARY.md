@@ -1,7 +1,7 @@
 # Summary
-[Foreword](./foreword.md)
-[January 26th](./20240126.md)
-[Appendix A - Dev Notes](./devnotes.md)
+- [Foreword](./foreword.md)
+- [January 26th: Scheme Learning Resources](./20240126.md)
+- [Appendix A - Dev Notes](./devnotes.md)
 <!--
 - [Objective - Demystify Design](./chapter_1.md)
 - [Design](./chapter_2.md)
