@@ -67,7 +67,7 @@ gh-pages: build
 	VER="$$( git describe --always --tags --dirty )" ; \
 	git worktree add --force "$$WORK" gh-pages ; \
 	rm -rf "$$WORK"/* ; \
-	rsync -av book/ "$$WORK"/ ; \
+	rsync -av docs/ "$$WORK"/ ; \
 	if [ -f CNAME ] ; then cp CNAME "$$WORK"/ ; fi ; \
 	pushd "$$WORK" ; \
 	git add -A ; \
