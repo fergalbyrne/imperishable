@@ -1,5 +1,6 @@
 # Summary
 [Foreword](./foreword.md)
+[January 26th](./20240126.md)
 [Appendix A - Dev Notes](./devnotes.md)
 <!--
 - [Objective - Demystify Design](./chapter_1.md)
