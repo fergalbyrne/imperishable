@@ -2,7 +2,7 @@
 
 deploy: docs
 	@echo "=====> deploying to Github"
-	git worktree add /tmp/book gh-pages
+	git worktree add --force /tmp/book gh-pages
 	mdbook build
 	cp -rp docs/* /tmp/book/
 	cd /tmp/book && \
