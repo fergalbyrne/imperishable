@@ -1,5 +1,6 @@
 # Summary
 [Foreword](./foreword.md)
+[Appendix A - Dev Notes](./devnotes.md)
 <!--
 - [Objective - Demystify Design](./chapter_1.md)
 - [Design](./chapter_2.md)
