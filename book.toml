@@ -3,7 +3,7 @@ authors = ["fergalbyrne"]
 language = "en"
 multilingual = false
 src = "src"
-title = "The Imperishable Wonderland of Infinite Fun"
+title = "The Imperishable Wonderland of Infinite Fun (Notes)"
 
 [preprocessor]
 
