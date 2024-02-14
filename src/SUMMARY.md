@@ -1,5 +1,6 @@
 # Summary
 [Foreword](./foreword.md)
+<!--
 - [Objective - Demystify Design](./chapter_1.md)
 - [Design](./chapter_2.md)
 - [Words](./chapter_3.md)
@@ -31,4 +32,4 @@
   - [Technique: Diagrams](./chapter_29.md)
 - [Phase: Dev](./chapter_30.md)
 - [Final Slides](./chapter_31.md)
-  
+-->
