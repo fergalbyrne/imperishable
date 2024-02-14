@@ -15,3 +15,12 @@ git commit --allow-empty -m "Initializing gh-pages branch"
 git push origin gh-pages
 git checkout main # was master
 ```
+
+I added entries to the Makefile provided [here](https://github.com/kg4zow/mdbook-template/tree/main)
+
+Now, I run 
+```bash
+git commit -a -m "publish"
+git push
+make deploy
+```
