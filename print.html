@@ -492,7 +492,7 @@ implementation, it's likely to say which version of the spec is supported:
 they support R4RS, they support R5RS, R6, R7, "R7 small".</p>
 <p>Nothing supports "R7 large" completely because that spec is still
 being developed...</p>
-<p>Scheme currently supports R6RS, and even for something like R6RS or R5RS,
+<p>Chez Scheme currently supports R6RS, and even for something like R6RS or R5RS,
 you'll often see that an individual implementation will describe differences
 from the spec. So in fact, for some versions of the specification, the
 specification itself is internally inconsistent, and it's impossible to implement
@@ -501,11 +501,11 @@ a fully conforming
 implementation...</p>
 <p>Also there are some subtleties in the spec that make a little bit of a design and
 implementation tradeoff. To decide to implement every single thing in the spec so many
-implementations will say they Implement RNRS whatever N is, modulo this one little feature...</p>
+implementations will say they implement RNRS whatever N is, modulo this one little feature...</p>
 <p>Ok, so those are the the language specs and it's really important if
 you're going to use Scheme, or any other language, to be comfortable with the
-definition of the language.</p>
-<p>I think a nice thing about Scheme is this the the specification is actually pretty
+definition of the language, I think.</p>
+<p>A nice thing about Scheme is this the the specification is actually pretty
 small - if you want to learn C++ or Java those specifications are quite
 complicated although C++ they seem to be (maybe) simplifying. Java still seems to be
 getting more complicated in a way, although they are adding abstractions that hopefully are
@@ -514,6 +514,22 @@ helpful.</p>
 <ul>
 <li><a href="https://scheme.com/tspl4/">The Scheme Programming Language</a></li>
 </ul>
+<p>Ok, another way to learn about Scheme is to read this book. This is a
+book I refer to all the time, which is called <a name="a017"></a><em>The Scheme Programming Language</em> (4th Edition) by <a name="a018"></a>Kent Dybvig,
+who's creator of <a name="a019"></a>Chez Scheme, and who also was the editor of
+R6RS, that spec. And so this is describing in the 4th Edition, you
+know, basically R6RS Scheme, but instead of describing it in a very formal way, it is describing Scheme
+from the standpoint of examples and motivation, and just gives a lot more detail.</p>
+<p>So it's not really a textbook or tutorial (although it has aspects of that), if you didn't know how to
+program at all I think this would be a hard book to learn programming from, but it's a great book to go to, to try to
+understand what the specification is trying to say. So if there's part of R6RS that's complicated,
+or you just don't know about a feature at all, if you read about it in this book,
+and then look at the spec - then look at R6RS - then that will give you a much better
+idea of what's going on, and since Kent was the editor for the
+R6RS process, he understands what the motivation was, and he's also an implementer, so he knows
+inside and out not just the motivation from the specification process, but how at least
+Chez Scheme implements those parts of the language, or at least how how Chez Scheme implemented it when he wrote this book!
+Very, very useful resource; the book's very well written.</p>
 <h2 id="the-chez-scheme-users-guide"><a class="header" href="#the-chez-scheme-users-guide">The Chez Scheme User's Guide</a></h2>
 <ul>
 <li><a href="https://cisco.github.io/ChezScheme/csug9.6/csug.html">The Chez Scheme User's Guide</a></li>
@@ -531,41 +547,7 @@ helpful.</p>
 </ul>
 <!--
 
- okay another way to learn about scheme is to read this book this is a
-21:17
-book I refer to all the time which is called the scheme programming language fourth edition by Kent diig who's
-21:23
-creator of sha scheme and who also was the editor of
-21:30
-r6rs uh that spec and so this is describing in the fourth edition um you
-21:36
-know basically r6rs scheme but instead of describing it in a very formal way it
-21:43
-is describing scheme you know from the standpoint of examples and
-21:50
-motivation and uh gives just gives a lot more detail so this is you know it's not
-21:55
-it's not really a textbook or tutorial alth although it has aspects of that um you know if you didn't know how to
-22:01
-program at all I think this would be a hard book to learn programming from but it's a great book to go to to try to
-22:10
-understand what the specification is trying to say so if there's part of r6rs that's complicated
-22:16
-or you just don't know about a feature at all if you read about it in this book
-22:22
-and then look at the spec then look at r6rs then that will give you much better
-22:28
-idea of what's going on and since Kent you know was um the editor for for the
-22:36
-r6rs process he understands what the motivation was and he's also an implementer so he knows inside and out
-22:44
-not just the motivation from the specification process but how at least
-22:49
-Shay scheme implements um those parts of the language or at least how how Shay
-22:55
-scheme implemented it when he wrote This Book very very useful resource the book's
-23:01
-very well written another companion guide that
+another companion guide that
 23:07
 goes to that is the Shay scheme users guide so like I said Kent diig is a
 23:13
@@ -776,11 +758,13 @@ git push
 make deploy
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="index"><a class="header" href="#index">Index</a></h1>
-<p>Chris Hanson, <a href="20240126.html#a011">1</a><br/>
+<p>Chez Scheme, <a href="20240126.html#a019">1</a><br/>
+Chris Hanson, <a href="20240126.html#a011">1</a><br/>
 Daniel P Friedman, <a href="20240126.html#a002">1</a><br/>
 Gerald J Sussman, <a href="20240126.html#a007">1</a><br/>
 Guy Steele, <a href="20240126.html#a015">1</a><br/>
 Harold Abelson, <a href="20240126.html#a006">1</a><br/>
+Kent Dybvig, <a href="20240126.html#a018">1</a><br/>
 Lambda the Ultimate, <a href="20240126.html#a014">1</a><br/>
 Matthias Felleisen, <a href="20240126.html#a003">1</a><br/>
 Racket, <a href="20240126.html#a004">1</a><br/>
@@ -791,6 +775,7 @@ Simply Scheme, <a href="20240126.html#a012">1</a><br/>
 Software Design for Flexibility, <a href="20240126.html#a010">1</a><br/>
 The Little Schemer, <a href="20240126.html#a001">1</a><br/>
 The Reasoned Schemer, <a href="20240126.html#a009">1</a><br/>
+The Scheme Programming Language, <a href="20240126.html#a017">1</a><br/>
 The Structure and Interpretation of Computer Programs, <a href="20240126.html#a005">1</a><br/></p>
 
                     </main>
