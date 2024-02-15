@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="foreword.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="shownotes.html"><strong aria-hidden="true">2.</strong> Shownotes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="20240126.html" class="active"><strong aria-hidden="true">2.1.</strong> January 26th: Scheme Learning Resources</a></li></ol></li><li class="chapter-item expanded "><a href="devnotes.html"><strong aria-hidden="true">3.</strong> Appendix A - Dev Notes</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="foreword.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="shownotes.html"><strong aria-hidden="true">2.</strong> Shownotes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="20240126.html" class="active"><strong aria-hidden="true">2.1.</strong> January 26th: Scheme Learning Resources</a></li></ol></li><li class="chapter-item expanded "><a href="devnotes.html"><strong aria-hidden="true">3.</strong> Appendix A - Dev Notes</a></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">4.</strong> Index</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -175,11 +175,22 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="january-26th-2024-scheme-learning-resources"><a class="header" href="#january-26th-2024-scheme-learning-resources">January 26th 2024: Scheme Learning Resources</a></h1>
-<p><a href="https://www.youtube.com/watch?v=iC8eSdoyu9A"><img src="https://img.youtube.com/vi/iC8eSdoyu9A/0.jpg" width="100%"/></a></p>
+<p><a href="https://youtu.be/iC8eSdoyu9A"><img src="https://img.youtube.com/vi/iC8eSdoyu9A/0.jpg" width="100%"/></a>
+Watch Will's video at <a href="https://youtu.be/iC8eSdoyu9A">https://youtu.be/iC8eSdoyu9A</a></p>
+<div id="admonition-words-by-will-e-byrd" class="admonition info">
+<div class="admonition-title">
+<p>Words by Will E. Byrd</p>
+<p><a class="admonition-anchor-link" href="#admonition-words-by-will-e-byrd"></a></p>
+</div>
+<div>
+<p>The following is a (very) lightly edited version of the transcript of Will's video linked above. Links to
+content mentioned have been located and included for further reading/viewing.</p>
+</div>
+</div>
 <h2 id="intro"><a class="header" href="#intro">Intro</a></h2>
 <p>Welcome to Episode IV of <strong>Will's Guide</strong>. This year, I've decided to make
 1,024 videos - I've upped the number from a thousand, because I think two to the
-10 or one kiloTube of videos is more fun!</p>
+tenth or one kiloTube of videos is more fun!</p>
 <p>I've also set up the Discord server, and we've had about a dozen people join.
 If you're interested in joining the Discord server <em>The Imperishable Wonderland of
 Infinite Fun</em>, please email me.</p>
@@ -189,16 +200,16 @@ about how you might learn Scheme. I'm going to have a whole bunch of videos on S
 but how do you learn about Scheme? What are the resources available?
 Let's just talk about a few of them I found useful..</p>
 <!-- 0:44 -->
-<h3 id="the-little-schemer-by-dan-friedman-and-matthias-felleisen"><a class="header" href="#the-little-schemer-by-dan-friedman-and-matthias-felleisen">The Little Schemer by Dan Friedman and Matthias Felleisen</a></h3>
+<h3 id="the-little-schemer-by-dan-friedman-and-matthias-felleisen"><a class="header" href="#the-little-schemer-by-dan-friedman-and-matthias-felleisen"><em>The Little Schemer</em> by Dan Friedman and Matthias Felleisen</a></h3>
 <ul>
 <li><a href="https://mitpress.mit.edu/9780262560993/the-little-schemer/">The Little Schemer (MIT Press)</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Daniel_P._Friedman">Dan's Wikipedia Entry</a>}}</li>
-<li><a href="https://felleisen.org/matthias/">Felleisen.org Site</a>}} and <a href="https://en.wikipedia.org/wiki/Matthias_Felleisen">Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Daniel_P._Friedman">Dan's Wikipedia Entry</a></li>
+<li><a href="https://felleisen.org/matthias/">Felleisen.org Site</a>, <a href="https://en.wikipedia.org/wiki/Matthias_Felleisen">Matthias' Wikipedia</a> and <a href="https://racket-lang.org/">Racket.org</a></li>
 </ul>
-<p>One is called The Little Schemer by Daniel P Friedman{{footnote:  and
-Matthias Felleisen{{footnote: .
+<p>One is called <a name="a001"></a><em>The Little Schemer</em> by <a name="a002"></a>Daniel P Friedman and
+<a name="a003"></a>Matthias Felleisen.
 Dan was my adviser at Indiana University for my PhD, and he was also Matthias's adviser.
-You also might know Matthias from the <a href="https://racket-lang.org/">Racket</a> world, so you have two experts guiding
+You also might know Matthias from the <a name="a004"></a>Racket world, so you have two experts guiding
 you.</p>
 <p>This book is really about thinking computationally, and specifically thinking about <em>recursion</em> - recursion over
 lists and trees - those sorts of things, and also a little interpreter work. So, if you think is is going to be a
@@ -211,61 +222,41 @@ If you're not comfortable with recursion, if you read this book and if you learn
 comfortable with recursion, because Scheme is really based on recursion. There's no loop constructs like there
 are in most languages (or anything does look like a loop, it's actually tail recursion which we'll talk about later)..</p>
 <p>So it's sort of the secret that Scheme doesn't really have loops in the way most languages do, although it turns out you
-can Implement Loops that are equivalent to a certain type of recursion..</p>
+can implement loops that are equivalent to a certain type of recursion..</p>
 <h2 id="the-structure-and-interpretation-of-computer-programs-by-hal-abelson-jerry-and-julie-sussman"><a class="header" href="#the-structure-and-interpretation-of-computer-programs-by-hal-abelson-jerry-and-julie-sussman">The Structure and Interpretation of Computer Programs by Hal Abelson, Jerry and Julie Sussman</a></h2>
 <ul>
 <li><a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">The Structure and Interpretation of Computer Programs</a></li>
 </ul>
-<p>Another great resource is the Structure and Interpretation of Computer
-Programs by Harold Abelson and Gerald J Sussman with Julie
-Sussman.  this is very famous as maybe the
-2:44
-greatest textbook in the history of computer science was used as the introductory textbook at MIT for many
-2:52
-years it has all sorts of interesting ideas about computation and interpreters
-2:57
-how to write interpreters interpreters how you write a program that interprets another program those sorts of ideas
-3:04
-computational models great book full of deep fascinating ideas once again not a
-3:11
-manual on scheme scheme is introduced as needed as a computational notation which
-3:17
-really gets back to the heart of lisp the lisp family of languages you you
-3:23
-need to have some sort of notation to talk about computation so let's have a
-3:29
-very elegant simple minimal notation that's compositional has nice properties
-3:35
-and we can think about that's at the heart of scheme and that's one reason I really like
-3:40
-scheme there's a series of videos based on the ideas in the books called the
-3:46
-sicp lectures and if you're interested in the book you
-3:53
-might like these videos I will say that the videos can be in the book can be a
-3:59
-little mathy especially in terms of the examples um you know they aim towards
-4:05
-the MIT you know entering class or you know in this case um for these lectures I
-4:14
-don't know if these are supposed to be more experienced programmers or or whatever but um you know it can turn
-4:21
-people off a little bit so if you find that this is a little Hardo maybe start
-4:27
-with something like the little schemer first which is really written for the bright high school student but the ideas
-4:33
-are very deep and powerful and can you know can benefit anyone U so maybe start with something
-4:39
-like the little schemer and if you feel that's not enough you could try the reason schemer which is a much harder
-4:46
-book um but in any case you could build yourself up towards the ideas in sicp
-4:52
-over time</p>
+<p>Another great resource is <a name="a005"></a><em>The Structure and Interpretation of Computer
+Programs</em> by <a name="a006"></a>Harold Abelson and <a name="a007"></a>Gerald J Sussman with Julie
+Sussman.  This is very famous as maybe the greatest textbook in the history of
+computer science - it was used as the introductory textbook at MIT for many
+years. It has all sorts of interesting ideas about computation and interpreters -
+how to write interpreters, how you write a program that interprets another program,
+those sorts of ideas, computational models. Great book, full of deep fascinating ideas.</p>
+<p>Once again not a manual on Scheme - Scheme is introduced as needed as a computational
+notation which really gets back to the heart of Lisp, the Lisp family of languages. You
+need to have some sort of notation to talk about computation, so let's have a
+very elegant, simple, minimal notation that's compositional, has nice properties,
+and we can think about that's at the heart of Scheme, and that's one reason I really like
+Scheme.</p>
 <h2 id="mit-6001-1986-lecture-series"><a class="header" href="#mit-6001-1986-lecture-series">MIT 6.001 1986 Lecture Series</a></h2>
 <p><a href="https://www.youtube.com/embed/videoseries?si=QTCjrbRVLwYF_xsx&amp;list=PLE18841CABEA24090"><img src="https://img.youtube.com/vi/-J_xL4IGhJA/0.jpg" width="100%"/></a></p>
 <ul>
 <li><a href="https://www.youtube.com/playlist?list=PLE18841CABEA24090">MIT 6.001 1986 Lectures on YouTube</a></li>
 </ul>
+<p>There's a series of videos based on the ideas in the books called the
+<a name="a008"></a><em>SICP Lectures</em> and if you're interested in the book you
+might like these videos.</p>
+<p>I will say that the videos can be - and the book can be - a little mathy, especially in terms of the
+examples. They aim towards the MIT entering class, or in this case, for these lectures I
+don't know if these are supposed to be more experienced programmers or whatever, but it can turn
+people off a little bit. So if you find that this is a little hard going, maybe start
+with something like <em>The Little Schemer</em> first, which is really written for the bright high school student,
+but the ideas are very deep and powerful, and can benefit anyone. So maybe start with something
+like <em>The Little Schemer</em>, and if you feel that's not enough, you could try <a name="a009"></a><em>The Reasoned Schemer</em>
+which is a much harder book, but in any case you could build yourself up towards the ideas in SICP
+over time.</p>
 <h2 id="software-design-for-flexibility-by-chris-hanson-and-jay-sussman"><a class="header" href="#software-design-for-flexibility-by-chris-hanson-and-jay-sussman">Software Design for Flexibility by Chris Hanson and Jay Sussman</a></h2>
 <ul>
 <li><a href="https://mitpress.mit.edu/9780262045490/software-design-for-flexibility/">Software Design for Flexibility</a></li>
