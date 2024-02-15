@@ -396,23 +396,120 @@ that are worth taking a look at, and many of these are involving Scheme or some 
 <ul>
 <li><a href="https://www.scheme.org/">Scheme.org</a></li>
 </ul>
+<p>There's also this <a name="a016"></a><em>scheme.org</em> website, there at least used to be a website called "Read Scheme", I don't know if that
+still exists, but you know Scheme's been around long enough that websites come
+and go. The scheme.org website seems to have lots of useful resources, and you can see that there are different
+standards and implementations, and so forth, great things about Community, books...</p>
 <h2 id="schemedoc-bibliography"><a class="header" href="#schemedoc-bibliography">SchemeDoc Bibliography</a></h2>
 <ul>
 <li><a href="https://github.com/schemedoc/bibliography">SchemeDoc Bibliography</a></li>
 </ul>
-<h2 id="r5rs-page"><a class="header" href="#r5rs-page">R5RS Page</a></h2>
+<p>Here is a Scheme bibliography on GitHub and this lists all sorts of lambda
+papers, and papers on macros (well maybe it doesn't... Like I said Scheme's been
+around a long time, so I don't know why these things aren't working...) So, you know, there are
+lots and lots of papers on different topics like reflection, a bunch of really
+interesting papers on reflection in Scheme, and we'll talk about those too.</p>
+<h2 id="r5rs-r6rs-r7rs-pages"><a class="header" href="#r5rs-r6rs-r7rs-pages">R5RS, R6RS, R7RS Pages</a></h2>
 <ul>
 <li><a href="https://conservatory.scheme.org/schemers/Documents/Standards/R5RS/">R5RS Page</a></li>
 <li><a href="https://conservatory.scheme.org/schemers/Documents/Standards/R5RS/r5rs.pdf">R5RS Standard PDF</a></li>
-</ul>
-<h2 id="r6rs"><a class="header" href="#r6rs">R6RS</a></h2>
-<ul>
 <li><a href="https://www.r6rs.org/">R6RS.org</a></li>
-</ul>
-<h2 id="r7rs"><a class="header" href="#r7rs">R7RS</a></h2>
-<ul>
 <li><a href="https://www.r7rs.org/">R7RS.org</a></li>
 </ul>
+<p>All right, another way if you really want to learn Scheme, is to start looking
+at the standards - like R5RS: that's the <em>Revised Revised Revised Revised Revised
+Report on the Algorithmic Language Scheme</em>, so there's this tradition of
+having "Revised" repeated a bunch of times, so R6RS - add one more "Revised" at the
+beginning, so be Revised to the sixth power.</p>
+<p>R7RS, which is the standard currently being developed has "Revised" to the
+seventh power so that's if you hear people talk about R5RS, R6RS,
+they might just call it R6, they're talking about different versions of the Scheme specification
+standard. R5RS was the standard that was in place when I started graduate
+school, and when I started studying Scheme in a serious way.</p>
+<p>Normally you hear about people talking about R4RS, R5RS, R6RS, R7RS. R7RS is broken into
+two parts - a "large" and a "small" - but those are the standard things you hear
+about, so if someone's talking about R5RS Scheme, that's what they're referring to - they're referring to
+that version of Scheme.</p>
+<p>And you can get the report which is pretty short - it's 50 pages long - this
+is a beautiful document, the R5 document, oh I love it, one of my favorite
+documents in computation. And you know, it has an index, it has a denotational semantics which has some problems,
+but it contains a complete semantics for the programming language, and an
+index and descriptions of the core features of language, and the syntax, and all that, and examples, and the whole
+thing's 50 pages long!</p>
+<p>So you can read 50 pages, it's not that long, there'll be things you don't understand, but there'll
+be lots of things you do understand, because this is written actually very well, and if you take a Scheme
+interpreter, or Scheme compiler, and you try going through the examples
+with your Scheme compiler, you can get a lot of mileage, just from reading through this
+document.</p>
+<p>More recently, there's the <em>Revised Revised Revised Revised Revised Revised</em> (I think I got that right) <em>Report on the
+Algorithmic Language Scheme</em> Revised to the sixth power or R6RS, and you can find it on R6RS.org. There are different
+versions of the specification. Now for R6, they broke up the specification into both the language
+specification, and the standard libraries, so this is a bigger version of Scheme, significantly bigger than R5RS.</p>
+<p>It's somewhat controversial that it was so big. Now, compared to a language like Java, it's tiny, but it's still much bigger
+than R5, which was bigger than R4, and there are some people in the Scheme community who love the tiny tiny tiny
+core language that's easy to implement, easy to teach, easy to understand, and there's some people who want a pragmatic
+practical language for everyday programming practical tasks - they want a bigger language. In R6, they
+found something of a middle ground, that didn't make everyone happy. Maybe it made
+no one happy! But that was the approach taken for R6, and so they broke the standard libraries into a different
+document, and they also have these Non-normative Appendices, and Rationale.</p>
+<p>This is great if you want to understand how a language is designed, so this is a
+discussion about <em>why</em> they did certain things. Ok, so not only is there a a
+specification, and in this case a different type of semantics, this I believe is operational semantics, but
+they also talk about why they made these decisions. I think that's pretty
+interesting.</p>
+<p>Now, if you want to get your hands on a specification, and understand it, what I probably would recommend is starting with R5,
+just because it's so small. R5RS doesn't really describe things like hygienic macros in a lot of depth and there
+are some things that are frankly mistakes in or or oversights in the spec, so I wouldn't say
+that this is the final word, even for the R5 version. However, it's so small and
+it's so well written, that I think it's a great way to get a handle on what a spec
+looks like.</p>
+<p>Or you could just dive into R6, but just be aware that the this is a bigger language and and specifies a lot more,
+and this libraries part is large as well.</p>
+<p>So, ok, and then there's an R7RS, which I was talking about which is still being developed. There's a "small" language
+and a "large" language. So like I said, there was some controversy over R6RS, because it was a
+bigger standard than R5, and yet it didn't include things like threads, it didn't include lots of information about dealing
+with the operating system and the web. So people who wanted to use Scheme as a a teaching language,
+or as a language where they could easily hack up an implementation and play around with ideas - that way - some of those people
+weren't so happy with R6, because it was bigger and more complicated than R5, harder to implement, harder to teach...
+And at the same time, people who want to do web programming, let's say, or create a video game in Scheme,
+and interact with graphics or whatever complicated thing, they weren't happy, because R6RS didn't specify that.</p>
+<p>But what R6RS <em>did</em> specify was a library system where people could (at least in
+theory) write code that could be modularized, and maybe ported between different implementations. Before R6RS, there really wasn't
+a chance to port code easily between Scheme implementations so R6 was a step in that direction.</p>
+<p>And R7RS is a reaction to some extent (I think) against R6 where they say: "Ok, let's have a small language for the people
+who want a tiny jewel-like gem of a language, that's easy to implement, easy to understand, they can
+hack it to their heart's content for, you know, programming languages research, or whatever they want to do; they can
+have the small language".</p>
+<p>And for the people who want to have a really big language, they have the big language. So
+they split up the spec, which is an interesting idea. What's happened in practice is that
+the small language design was completed in 2013. The large language design is
+still going on, so, 11 years after the small language was finished, and I
+guess this was sort of, almost a guaranteed outcome when you're trying
+to make a much bigger version of the language, that's not supported by a
+bunch of industry, and government research labs or whatever...</p>
+<p>So this spec is still going on. You will see for any individual Scheme
+implementation, it's likely to say which version of the spec is supported:
+they support R4RS, they support R5RS, R6, R7, "R7 small".</p>
+<p>Nothing supports "R7 large" completely because that spec is still
+being developed...</p>
+<p>Scheme currently supports R6RS, and even for something like R6RS or R5RS,
+you'll often see that an individual implementation will describe differences
+from the spec. So in fact, for some versions of the specification, the
+specification itself is internally inconsistent, and it's impossible to implement
+a correct version, or at least people have made that argument: that it's impossible to create
+a fully conforming
+implementation...</p>
+<p>Also there are some subtleties in the spec that make a little bit of a design and
+implementation tradeoff. To decide to implement every single thing in the spec so many
+implementations will say they Implement RNRS whatever N is, modulo this one little feature...</p>
+<p>Ok, so those are the the language specs and it's really important if
+you're going to use Scheme, or any other language, to be comfortable with the
+definition of the language.</p>
+<p>I think a nice thing about Scheme is this the the specification is actually pretty
+small - if you want to learn C++ or Java those specifications are quite
+complicated although C++ they seem to be (maybe) simplifying. Java still seems to be
+getting more complicated in a way, although they are adding abstractions that hopefully are
+helpful.</p>
 <h2 id="the-scheme-programming-language-by-r-kent-dybvig"><a class="header" href="#the-scheme-programming-language-by-r-kent-dybvig">The Scheme Programming Language by R. Kent Dybvig</a></h2>
 <ul>
 <li><a href="https://scheme.com/tspl4/">The Scheme Programming Language</a></li>
@@ -434,216 +531,7 @@ that are worth taking a look at, and many of these are involving Scheme or some 
 </ul>
 <!--
 
-9:59
-there's also this scheme. org website there at least used to be a website called read scheme I don't know if that
-10:06
-still exist but you know scheme's been around long enough that websites come
-10:11
-and go the scheme. org website seems to have lots of lots of useful
-10:17
-resources uh and you can see that there are different standards and implementations so forth great things
-10:25
-about Community books
-10:30
-here is a scheme bibliography on GitHub and this lists all sorts of uh Lambda
-10:39
-papers and papers on Macros well maybe it
-10:48
-doesn't fail what's going on here I don't know like I said scheme's been
-10:54
-around a long time so I don't know why these things aren't working see does that open okay here we go maybe it's was
-10:59
-just a bad link maybe it's just a bad link so you know there are lots and lots
-11:06
-of papers on different topics like reflection you know a bunch of really
-11:11
-interesting papers on reflection and scheme um we'll talk about those
-11:18
-too all right another way if you really want to learn scheme is to start looking
-11:23
-at the standards like R5 RS that's the revised revised Revis Revis Revis
-11:32
-report on the algorithmic language scheme so there's this tradition of
-11:38
-having revised repeated a bunch of times so R6 RS add one more Revis at the
-11:44
-beginning so be revised to the sixth power R7 RS which is standards currently being developed has revised to the
-11:52
-seventh power so that's if you hear people talk about R R5 R RS R six r s
-11:59
-they might just call it R six they're talking about different versions of the scheme specification
-12:06
-standard um R5 RS was the standard that was in place when I started uh graduate
-12:13
-school and when I started studying scheme in a serious way normally you
-12:18
-hear about people talking about R4 RS R5 RS R6 RS R7 RS our 7 RS is broken into
-12:25
-two parts a large and a small but those are the standard things you hear
-12:31
-about so if someone's talking about R5 RS scheme that's what they're referring to they're referring to that version of
-12:37
-scheme and you can get the report which is pretty short it's 50 pages long this
-12:43
-is a beautiful document the R5 document oh I love it one of my favorite
-12:49
-documents in computation and you know it has an index it
-12:55
-has a denotational semantics which has some problems um but you know it
-13:01
-contains a complete semantics for the programming language and an
-13:06
-index and descriptions of the core features of language and the syntax and all that and examples and the whole
-13:14
-thing's 50 pages long so you can read 50 pages it's not that long there'll be things you don't understand but there'll
-13:20
-be lots of things you do understand because this written actually very well and if you you know take a scheme
-13:26
-interpreter or scheme compiler and you try going through the examples
-13:31
-with your scheme compiler you can get a lot of mileage just from reading through this
-13:37
-document more recently there's the revised revised revised revised revised
-13:44
-revised I think I got that right report on the algorithmic language scheme revised to the six power or
-13:50
-r6rs and you can find on R6 rs.
-13:56
-org um different versions of the specification now for R six they broke
-14:03
-up the specification into both the language
-14:08
-specification and the standard libraries so this is a bigger version of scheme
-14:13
-significantly bigger than RS R5 RS it's somewhat controversial that it was so
-14:19
-big now compared to a language like Java it's tiny but it's still much bigger
-14:27
-than R5 which was bigger than R4 and there are some people in the scheme Community who love the tiny tiny tiny
-14:33
-core language that's easy to implement easy to teach easy to understand and there's some people who want a pragmatic
-14:40
-practical language for everyday programming practical tasks they want a bigger language R six you know they
-14:47
-found something of a middle ground that didn't make everyone happy maybe it made
-14:52
-no one happy but that was the approach taken for our six and so they broke the standard libraries into a different
-14:59
-document and they also have these non-normative appendices and rationale
-15:04
-this is great if you want to understand how a language is designed so this is a
-15:09
-discussion about why they did certain things okay so not only is there a a
-15:15
-specification and in this case a different type of semantics this I believe is operational semantics but
-15:22
-they also talk about why they made these decisions I think that's pretty
-15:28
-interesting um now you know if you want to you know
-15:33
-get your hands on a specification and understand it what I probably would recommend is starting with R5 Just
-15:40
-because it's so small R5 RS doesn't really describe things like hygienic
-15:45
-macros in a lot of depth and there are some things that you know are frankly
-15:51
-mistakes in or or oversights in the spec so I wouldn't say
-15:57
-that this is the final word even for the R5 version however it's so small and
-16:03
-it's so well written that I think it's a great way to get a handle on what a spec
-16:08
-looks like or you could just dive into R six um but just be aware that the this
-16:15
-is a bigger language and and specifies a lot more and you know this libraries
-16:21
-part is large as well so um okay and then there's an r s which I was talking
-16:29
-about which is still being developed there's a small language and a large
-16:34
-language so like I said there was some controversy over R6 RS because it was a
-16:39
-bigger standard than R5 and yet it didn't include things like threads
-16:46
-didn't include lots of information about dealing with the operating system and you know the web so uh people who wanted
-16:54
-to use scheme as a a teaching language or as a language where they could easily
-17:01
-hack up an implementation and play around with ideas that way some of those people weren't so happy with r six
-17:08
-because it was bigger and complicated more complicated than R5 harder to implement harder to teach and at the
-17:15
-same time people who want to do web programming let's say uh or create a video game and scheme and interact with
-17:22
-Graphics or whatever uh complicated thing they wanted to do they weren't happy because R6 RS didn't specify that
-17:31
-but what R6 RS did specify was a library system where people could at least in
-17:38
-theory write code that could be uh modularized and maybe ported between
-17:44
-different implementations before R6 RS there really wasn't a chance to port code easily between scheme
-17:51
-implementations so R six was a step in that direction and r s it's a reaction
-17:57
-to some extent I think against R six where they say okay let's have a small language for the people who want a tiny
-18:04
-Jewel like Gem of a language that's easy to implement easy to understand they can
-18:12
-hack it to their heart's contempt for uh you know programming languages research or whatever they want to do they can
-18:18
-have the small language and for the people who want to have a really big language they have the big language so
-18:25
-they split up the spec which is interesting idea what's happened in practice is that
-18:32
-the small language design was completed in 2013 the large language design is
-18:38
-still going on so 11 years after the small um language was finished and I
-18:44
-guess this was sort of a you know almost a guaranteed outcome when you're trying
-18:50
-to make a much bigger version of the language um that's not supported by a
-18:56
-bunch of Industry you know and and government research Labs or whatever
-19:04
-so um this this spec is still going on you will see for any individual scheme
-19:12
-implementation it's likely to say which version of the spec is supported they support R4 RS they support R5 R six R7
-19:20
-R7 small nothing supports R7 large completely because that spec is still
-19:26
-being developed scheme um currently supports R6
-19:32
-RS uh and even for something like R6 RS or R5 RS you'll often see that an
-19:40
-individual specification or sorry individual implementation will describe differences
-19:46
-from the spec so in fact for some versions of the specification the the
-19:52
-specification itself is internally inconsistent and it's impossible to implement
-19:58
-a a correct version or at least people have made that argument that it's impossible to create a fully conforming
-20:06
-implementation um also there are some subtleties in the spec that you know
-20:12
-make a little bit of a design and implementation tradeoff to decide to
-20:18
-implement every single thing in the spec so many implementations will say they're
-20:23
-they Implement R NRS whatever n is um modulo this one little feature what have
-20:31
-you okay so those are the the language specs and it's really important if
-20:37
-you're going to use scheme or any other language to be comfortable with the
-20:43
-definition of the language I think nice thing about scheme is this the the specification is actually pretty
-20:50
-small if you want to learn C++ or Java those specifications are quite
-20:56
-complicated although C++ they seem to be um maybe simplifying uh Java still seems to be
-21:04
-getting more complicated in a way although they are adding abstractions that hopefully are
-21:10
-helpful okay another way to learn about scheme is to read this book this is a
+ okay another way to learn about scheme is to read this book this is a
 21:17
 book I refer to all the time which is called the scheme programming language fourth edition by Kent diig who's
 21:23
@@ -897,6 +785,7 @@ Lambda the Ultimate, <a href="20240126.html#a014">1</a><br/>
 Matthias Felleisen, <a href="20240126.html#a003">1</a><br/>
 Racket, <a href="20240126.html#a004">1</a><br/>
 Scheme and Functional Programming Workshop, <a href="20240126.html#a013">1</a><br/>
+scheme.org, <a href="20240126.html#a016">1</a><br/>
 SICP Lectures, <a href="20240126.html#a008">1</a><br/>
 Simply Scheme, <a href="20240126.html#a012">1</a><br/>
 Software Design for Flexibility, <a href="20240126.html#a010">1</a><br/>
